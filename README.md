@@ -1,6 +1,6 @@
 ## **iSpendify** - Expense Tracker
 
-###### iOS app in SwiftUI using Combine, SwiftUIFontIcon, SwiftUICharts and SwiftCollections
+###### iOS app in SwiftUI using Combine, Core Data, SwiftUICharts and SwiftCollections
 
 *Home View* shows graph and recent transactions with ability to add new transactions 
 
