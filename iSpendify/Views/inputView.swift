@@ -55,9 +55,10 @@ struct inputView: View {
                     DatePicker("Date", selection: $cdate, displayedComponents: .date)
                         .foregroundColor(Color.text)
                     Picker("Category", selection:$test){
-                        Text("test")
+                        Text("Software")
+                        Text("Transport")
                     }
-                    .pickerStyle(.menu)
+                    //.pickerStyle(.menu)
                 }
             }
             .scrollContentBackground(.hidden)
@@ -77,6 +78,12 @@ struct inputView: View {
                         Image(systemName: "keyboard.chevron.compact.down.fill")
                             .foregroundColor(Color.icon)
                     }
+                }
+                ToolbarItem(placement: .navigationBarTrailing){
+                    Button("Save"){
+                        print("Test")
+                    }
+                    .buttonStyle(GButton())
                 }
             }
             .navigationTitle("New Transaction")

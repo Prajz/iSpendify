@@ -16,7 +16,8 @@ struct TestRowView: View {
                 .fill(Color.icon.opacity(0.45))
                 .frame(width: 50, height: 50)
                 .overlay {
-                    Image(systemName: "key.fill")
+                    Image(systemName: "heart")
+                        //.foregroundColor(.white)
                         .resizable()
                         .frame(width: 30, height: 30)
                 }

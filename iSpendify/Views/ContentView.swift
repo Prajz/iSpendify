@@ -8,6 +8,22 @@
 import SwiftUI
 import LocalAuthentication
 
+struct GButton: ButtonStyle {
+    
+    @EnvironmentObject var authentication: Authentication
+    
+    func makeBody(configuration: Configuration) -> some View {
+        configuration.label
+            .padding()
+            .foregroundColor(Color.text)
+            .italic()
+            .bold()
+            .clipShape(Capsule())
+            .scaleEffect(configuration.isPressed ? 1.6 : 1)
+                        .animation(.easeOut(duration: 0.3), value: configuration.isPressed)
+    }
+}
+
 struct ContentView: View {
     
     @EnvironmentObject var authentication: Authentication
@@ -16,19 +32,34 @@ struct ContentView: View {
     @State private var text = "LOCKED"
     var body: some View {
         VStack {
+            Spacer()
+            
+            Text("Welcome back to iSpendify")
+                .foregroundColor(Color.text)
+                .font(.system(size: 26))
+                
+            
+            Spacer()
+            
             Image(systemName: "faceid")
                 .resizable()
                 .frame(width: 80, height: 80, alignment: .bottom)
-                .foregroundColor(Color.icon)
+                .foregroundColor(Color.text)
+            
+            
             Button("Tap here to login with FaceID")
             {
                 auth()
             }
-            .padding(/*@START_MENU_TOKEN@*/.all/*@END_MENU_TOKEN@*/)
-            .foregroundColor(Color.icon)
+            //.padding(/*@START_MENU_TOKEN@*/.all/*@END_MENU_TOKEN@*/)
+            //.foregroundColor(Color.icon)
+            .buttonStyle(GButton())
+            
+            Spacer()
         }
         .frame(maxWidth: .infinity, maxHeight: .infinity)
-        .background(LinearGradient(colors: [.orange,.green], startPoint: .topTrailing, endPoint: .bottomLeading))
+        //.background(LinearGradient(colors: [.orange,.teal], startPoint: .topTrailing, endPoint: .bottomLeading))
+        .background(Color.background)
     }
     
     func auth() {
