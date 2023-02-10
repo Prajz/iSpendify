@@ -9,9 +9,43 @@ import SwiftUI
 
 @main
 struct iSpendifyApp: App {
+    
+    @StateObject var authen = Authentication()
+    
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            if authen.isvali {
+                TabView{
+                    NavigationStack{
+                        HomeView()
+                        //RecentTransactionsView()
+                    }
+                    .tabItem{
+                        Image("airplane.circle.fill")
+                        Text("Test")
+                        
+                    }
+                    NavigationStack{
+                        RecentTransactionsView()
+                    }
+                    .tabItem{
+                        Image("creditcard")
+                        Text("Transactions")
+                    }
+                    .navigationViewStyle(.columns)
+                    NavigationStack{
+                        SettingsView()
+                    }
+                    .tabItem{
+                        Image("creditcard")
+                        Text("Settings")
+                    }
+                }
+                .environmentObject(authen)
+            } else{
+                ContentView()
+                    .environmentObject(authen)
+            }
         }
     }
 }
