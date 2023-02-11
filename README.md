@@ -4,7 +4,7 @@
 
 *LoginView* allows user to authenticate themself with FaceID upon opening the app
 
-![FaceID](/iSpendify/Extension/facei.png)
+![FaceID](/iSpendify/Extension/faci.png)
 
 *Home View* shows graph and recent transactions with ability to add new transactions 
 
