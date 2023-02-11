@@ -10,8 +10,8 @@
 		D70619BB2989E250003FBA10 /* inputView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D70619BA2989E250003FBA10 /* inputView.swift */; };
 		D70619BD298AF63E003FBA10 /* TestRowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D70619BC298AF63E003FBA10 /* TestRowView.swift */; };
 		D728AD522995A9C500295B40 /* Authentication.swift in Sources */ = {isa = PBXBuildFile; fileRef = D728AD512995A9C500295B40 /* Authentication.swift */; };
-		D77CDE3A2997F13200D3ED25 /* home.png in Resources */ = {isa = PBXBuildFile; fileRef = D77CDE392997F13200D3ED25 /* home.png */; };
-		D77CDE3C2997F27800D3ED25 /* transaction.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = D77CDE3B2997F27800D3ED25 /* transaction.jpeg */; };
+		D77CDE3C2997F27800D3ED25 /* input-transaction.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = D77CDE3B2997F27800D3ED25 /* input-transaction.jpeg */; };
+		D77CDE3E2997F5F400D3ED25 /* facei.png in Resources */ = {isa = PBXBuildFile; fileRef = D77CDE3D2997F5F400D3ED25 /* facei.png */; };
 		D7877B192985A734007DBB24 /* iSpendifyApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7877B182985A734007DBB24 /* iSpendifyApp.swift */; };
 		D7877B1B2985A734007DBB24 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7877B1A2985A734007DBB24 /* ContentView.swift */; };
 		D7877B1D2985A735007DBB24 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D7877B1C2985A735007DBB24 /* Assets.xcassets */; };
@@ -29,8 +29,8 @@
 		D70619BA2989E250003FBA10 /* inputView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = inputView.swift; sourceTree = "<group>"; };
 		D70619BC298AF63E003FBA10 /* TestRowView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestRowView.swift; sourceTree = "<group>"; };
 		D728AD512995A9C500295B40 /* Authentication.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Authentication.swift; sourceTree = "<group>"; };
-		D77CDE392997F13200D3ED25 /* home.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = home.png; sourceTree = "<group>"; };
-		D77CDE3B2997F27800D3ED25 /* transaction.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = transaction.jpeg; sourceTree = "<group>"; };
+		D77CDE3B2997F27800D3ED25 /* input-transaction.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "input-transaction.jpeg"; sourceTree = "<group>"; };
+		D77CDE3D2997F5F400D3ED25 /* facei.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = facei.png; sourceTree = "<group>"; };
 		D7877B152985A734007DBB24 /* iSpendify.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = iSpendify.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D7877B182985A734007DBB24 /* iSpendifyApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = iSpendifyApp.swift; sourceTree = "<group>"; };
 		D7877B1A2985A734007DBB24 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -87,8 +87,6 @@
 		D7877B1E2985A735007DBB24 /* Preview Content */ = {
 			isa = PBXGroup;
 			children = (
-				D77CDE3B2997F27800D3ED25 /* transaction.jpeg */,
-				D77CDE392997F13200D3ED25 /* home.png */,
 				D7877B1F2985A735007DBB24 /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
@@ -110,6 +108,8 @@
 		D7877B392986E55A007DBB24 /* Extension */ = {
 			isa = PBXGroup;
 			children = (
+				D77CDE3B2997F27800D3ED25 /* input-transaction.jpeg */,
+				D77CDE3D2997F5F400D3ED25 /* facei.png */,
 				D7877B352986DB51007DBB24 /* extC.swift */,
 				D7877B372986E549007DBB24 /* NumbersOnlyViewModifier.swift */,
 				D7877B3C2986E567007DBB24 /* TransactionModel.swift */,
@@ -178,8 +178,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				D7877B202985A735007DBB24 /* Preview Assets.xcassets in Resources */,
-				D77CDE3A2997F13200D3ED25 /* home.png in Resources */,
-				D77CDE3C2997F27800D3ED25 /* transaction.jpeg in Resources */,
+				D77CDE3E2997F5F400D3ED25 /* facei.png in Resources */,
+				D77CDE3C2997F27800D3ED25 /* input-transaction.jpeg in Resources */,
 				D7877B1D2985A735007DBB24 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
