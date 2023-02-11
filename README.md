@@ -22,6 +22,7 @@
 
 
 
-Keeps track of spending, allowing user to input expenditure and income, with a chart created based on the previous 30 days. Stores the data in local memory and can be accessed even after force quitting
+_________________________
+Keeps track of spending, allowing user to input expenditure and income, with a chart created based on the previous 30 days.
 
 A video demonstrating this project's functionality will soon be published [here](https://github.com/Prajz).
