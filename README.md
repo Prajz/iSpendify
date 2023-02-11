@@ -2,23 +2,25 @@
 
 ###### iOS app in SwiftUI using Combine, Core Data, SwiftUICharts and SwiftCollections
 
-*LoginView* allows user to authenticate themself with FaceID upon opening the app
+It consists of the following views:
 
-![FaceID](/iSpendify/Extension/faci.png)
+ - *LoginView* allows user to authenticate themself with FaceID upon opening the app
 
-*Home View* shows graph and recent transactions with ability to add new transactions 
+   ![FaceID](/iSpendify/Extension/faci.png)
 
-
-
-*Input View* allows the user to input monetary losses or gains.
-
-![Dark-mode-input](/iSpendify/Extension/input-transaction.jpeg)
-
-*Transactions View* which shows transactions based on date with abliity to add new transactions
+ - *Home View* shows graph and recent transactions with ability to add new transactions 
 
 
 
-*Settings View* which includes basic app settings
+ - *Input View* allows the user to input monetary losses or gains.
+
+   ![Dark-mode-input](/iSpendify/Extension/input-transaction.jpeg)
+
+ - *Transactions View* which shows transactions based on date with abliity to add new transactions
+
+
+
+ - *Settings View* which includes basic app settings
 
 
 
