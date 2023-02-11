@@ -4,7 +4,7 @@
 
 *LoginView* allows user to authenticate themself with FaceID upon opening the app
 
-![faceid](/iSpendify/Preview Content/home.png)
+![FaceID](/iSpendify/Extension/facei.png)
 
 *Home View* shows graph and recent transactions with ability to add new transactions 
 
@@ -12,7 +12,7 @@
 
 *Input View* allows the user to input monetary losses or gains.
 
-![Dark mode input](/iSpendify/Preview Content/transaction.jpeg)
+![Dark-mode-input](/iSpendify/Extension/input-transaction.jpeg)
 
 *Transactions View* which shows transactions based on date with abliity to add new transactions
 
