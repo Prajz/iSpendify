@@ -22,7 +22,7 @@ struct iSpendifyApp: App {
                     }
                     .tabItem{
                         Image("airplane.circle.fill")
-                        Text("Test")
+                        Text("Overview")
                         
                     }
                     NavigationStack{

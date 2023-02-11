@@ -34,14 +34,15 @@ struct ContentView: View {
         VStack {
             Spacer()
             
-            Text("Welcome back to iSpendify")
+            Text("Welcome back ;)")
                 .foregroundColor(Color.text)
                 .font(.system(size: 26))
+                .italic()
                 
             
             Spacer()
             
-            Image(systemName: "faceid")
+            Image("welcome-logo")
                 .resizable()
                 .frame(width: 80, height: 80, alignment: .bottom)
                 .foregroundColor(Color.text)
@@ -58,8 +59,8 @@ struct ContentView: View {
             Spacer()
         }
         .frame(maxWidth: .infinity, maxHeight: .infinity)
-        //.background(LinearGradient(colors: [.orange,.teal], startPoint: .topTrailing, endPoint: .bottomLeading))
-        .background(Color.background)
+        .background(LinearGradient(colors: [.indigo,.purple], startPoint: .topTrailing, endPoint: .bottomLeading))
+        //.background(Color.background)
     }
     
     func auth() {
