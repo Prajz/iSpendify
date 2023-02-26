@@ -2,7 +2,7 @@
 
 ###### iOS app in SwiftUI using Combine, Core Data, SwiftUICharts and SwiftCollections
 
-``` Will update the views with screenshots once fully functional
+###### Will update the views with screenshots once fully functional ######
 
 It consists of the following views:
 
@@ -14,7 +14,7 @@ It consists of the following views:
 
 
 
- - *Input View* allows the user to input monetary losses or gains.
+ -  *Input View* allows the user to input monetary losses or gains.
 
    ![Dark-mode-input](/iSpendify/Extension/input-transaction.jpeg)
 
