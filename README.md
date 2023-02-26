@@ -2,6 +2,8 @@
 
 ###### iOS app in SwiftUI using Combine, Core Data, SwiftUICharts and SwiftCollections
 
+``` Will update the views with screenshots once fully functional
+
 It consists of the following views:
 
  - *LoginView* allows user to authenticate themself with FaceID upon opening the app
