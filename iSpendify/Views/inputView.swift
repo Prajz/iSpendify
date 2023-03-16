@@ -19,7 +19,46 @@ class NumbersOnly: ObservableObject{
     }
 }
 
+
+
+enum categor: String, Identifiable, CaseIterable {
+    
+    var id: UUID {
+        return UUID()
+    }
+    
+    case transport = "Transport"
+    case software = "Software"
+    case food = "food"
+    case leisure = "leisure"
+    case health = "health"
+    case work = "work"
+}
+
+extension categor {
+    
+    var title: String {
+        switch self {
+        case .transport:
+            return "Transport"
+        case .software:
+            return "Software"
+        case .food:
+            return "Food"
+        case .leisure:
+            return "Leisure"
+        case .health:
+            return "Health"
+        case .work:
+            return "Work"
+        }
+    }
+}
+
 struct inputView: View {
+    
+    @Environment(\.managedObjectContext) var mox
+    @Environment(\.dismiss) var dismiss
     
     enum FocusedField{
            case dec
@@ -29,15 +68,21 @@ struct inputView: View {
         case b
     }
     
+    private func saveTask(){
+        do{
+            CoreDataManager().addtran(name: comp, isexp: expe, date: cdate, categoryy: mercha, amounte: amount, context: mox)
+            dismiss()
+        }
+    }
     
-   @State private var path = NavigationPath()
-   @State public var expe: Bool = UserDefaults.standard.bool(forKey: "DEB_KEY")
-   @State public var cdate = Date()
-   @State public var comp = ""
-    @State public var test = ""
-   @State public var amount: String = UserDefaults.standard.string(forKey: "AM_KEY") ?? ""
-   @State public var navi = true
-   @FocusState private var focusedField: FocusedField?
+    @State private var path = NavigationPath()
+    @State public var expe: Bool = UserDefaults.standard.bool(forKey: "DEB_KEY")
+    @State public var cdate = Date()
+    @State public var comp = ""
+    @Environment(\.managedObjectContext) private var viewContext
+    @State public var mercha: categor = .transport
+    @State public var amount: String = UserDefaults.standard.string(forKey: "AM_KEY") ?? ""
+    @FocusState private var focusedField: FocusedField?
     
 
     var body: some View {
@@ -54,11 +99,31 @@ struct inputView: View {
                     TextField("Company", text: $comp)
                     DatePicker("Date", selection: $cdate, displayedComponents: .date)
                         .foregroundColor(Color.text)
-                    Picker("Category", selection:$test){
-                        Text("Software")
-                        Text("Transport")
+                    Picker("Category", selection:$mercha){
+                        ForEach(categor.allCases){ categor in
+                            Text(categor.title).tag(categor)
+                        }
                     }
-                    //.pickerStyle(.menu)
+                    .pickerStyle(.menu)
+                }
+                Section{
+                    HStack{
+                        Spacer()
+                        Button("Save"){
+                            saveTask()
+                        }
+                        Spacer()
+                    }
+                }
+                
+                Section{
+                    HStack{
+                        Spacer()
+                        Button("Cancel"){
+                            dismiss()
+                        }
+                        Spacer()
+                    }
                 }
             }
             .scrollContentBackground(.hidden)
@@ -67,26 +132,6 @@ struct inputView: View {
             .onAppear {
                 UITextField.appearance().clearButtonMode = .whileEditing
             }
-            .toolbar {
-                ToolbarItem(placement: .keyboard) {
-                    Spacer()
-                }
-                ToolbarItem(placement: .keyboard) {
-                    Button {
-                        focusedField = nil
-                    } label: {
-                        Image(systemName: "keyboard.chevron.compact.down.fill")
-                            .foregroundColor(Color.icon)
-                    }
-                }
-                ToolbarItem(placement: .navigationBarTrailing){
-                    Button("Save"){
-                        print("Test")
-                    }
-                    .buttonStyle(GButton())
-                }
-            }
-            .navigationTitle("New Transaction")
             .frame(
                 minWidth: 0,
                 maxWidth: .infinity,

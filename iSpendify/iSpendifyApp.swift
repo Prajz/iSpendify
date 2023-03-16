@@ -10,6 +10,8 @@ import SwiftUI
 @main
 struct iSpendifyApp: App {
     
+    @StateObject private var dataController = CoreDataManager()
+    
     @StateObject var authen = Authentication()
     
     var body: some Scene {
@@ -17,7 +19,7 @@ struct iSpendifyApp: App {
             if authen.isvali {
                 TabView{
                     NavigationStack{
-                        HomeView()
+                        HomeView().environment(\.managedObjectContext, dataController.container.viewContext)
                         //RecentTransactionsView()
                     }
                     .tabItem{
@@ -26,7 +28,7 @@ struct iSpendifyApp: App {
                         
                     }
                     NavigationStack{
-                        RecentTransactionsView()
+                        RecentTransactionsView().environment(\.managedObjectContext, dataController.container.viewContext)
                     }
                     .tabItem{
                         Image("creditcard")

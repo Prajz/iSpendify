@@ -10,7 +10,7 @@ import Foundation
 struct Transactionmodel: Identifiable {
     let id: String = UUID().uuidString
     let date: String
-    var merchant: String
+    var merchantc: String
     let amount: Double
     let type: TransactionType.RawValue
     var categoryId: Int

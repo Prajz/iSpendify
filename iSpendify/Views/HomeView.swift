@@ -7,7 +7,13 @@
 
 import SwiftUI
 
+
 struct HomeView: View {
+    
+    @Environment (\.managedObjectContext) var mox
+    @FetchRequest (sortDescriptors: []) var trans : FetchedResults<Tra>
+    @State private var showingAddScreen = false
+    
     var body: some View {
         
         NavigationStack{
@@ -17,8 +23,7 @@ struct HomeView: View {
                         Text("t")
                             .padding()
                     }
-                    
-                    Text("test")
+                    Text("Trans: \(trans.count)")
                         .padding()
                 }
                 .frame(
@@ -30,13 +35,16 @@ struct HomeView: View {
                     )
                 .toolbar{
                     ToolbarItem{
-                        NavigationLink {
-                            inputView()
+                        Button{
+                            showingAddScreen.toggle()
                         } label: {
-                            Label("Add", systemImage: "plus.app.fill")
+                            Label("Add", systemImage: "plus.app")
                                 .foregroundColor(Color.icon)
                         }
                     }
+                }
+                .sheet(isPresented: $showingAddScreen){
+                    inputView()
                 }
                 .foregroundColor(Color.text)
                 .navigationBarTitleDisplayMode(.large)

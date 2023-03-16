@@ -8,7 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		D70619BB2989E250003FBA10 /* inputView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D70619BA2989E250003FBA10 /* inputView.swift */; };
-		D70619BD298AF63E003FBA10 /* TestRowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D70619BC298AF63E003FBA10 /* TestRowView.swift */; };
 		D728AD522995A9C500295B40 /* Authentication.swift in Sources */ = {isa = PBXBuildFile; fileRef = D728AD512995A9C500295B40 /* Authentication.swift */; };
 		D77CDE3C2997F27800D3ED25 /* input-transaction.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = D77CDE3B2997F27800D3ED25 /* input-transaction.jpeg */; };
 		D77CDE422997FC6B00D3ED25 /* faci.png in Resources */ = {isa = PBXBuildFile; fileRef = D77CDE412997FC6B00D3ED25 /* faci.png */; };
@@ -23,11 +22,12 @@
 		D7877B382986E549007DBB24 /* NumbersOnlyViewModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7877B372986E549007DBB24 /* NumbersOnlyViewModifier.swift */; };
 		D7877B3B2986E565007DBB24 /* PreviewTESTData.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7877B3A2986E565007DBB24 /* PreviewTESTData.swift */; };
 		D7877B3D2986E567007DBB24 /* TransactionModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7877B3C2986E567007DBB24 /* TransactionModel.swift */; };
+		D7C34D19299E85FC002F8DA6 /* ExpenModel.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = D7C34D17299E85FC002F8DA6 /* ExpenModel.xcdatamodeld */; };
+		D7C34D1B299E87A7002F8DA6 /* CoreDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7C34D1A299E87A7002F8DA6 /* CoreDataManager.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		D70619BA2989E250003FBA10 /* inputView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = inputView.swift; sourceTree = "<group>"; };
-		D70619BC298AF63E003FBA10 /* TestRowView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestRowView.swift; sourceTree = "<group>"; };
 		D728AD512995A9C500295B40 /* Authentication.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Authentication.swift; sourceTree = "<group>"; };
 		D77CDE3B2997F27800D3ED25 /* input-transaction.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "input-transaction.jpeg"; sourceTree = "<group>"; };
 		D77CDE412997FC6B00D3ED25 /* faci.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = faci.png; sourceTree = "<group>"; };
@@ -43,6 +43,8 @@
 		D7877B372986E549007DBB24 /* NumbersOnlyViewModifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NumbersOnlyViewModifier.swift; sourceTree = "<group>"; };
 		D7877B3A2986E565007DBB24 /* PreviewTESTData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PreviewTESTData.swift; sourceTree = "<group>"; };
 		D7877B3C2986E567007DBB24 /* TransactionModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransactionModel.swift; sourceTree = "<group>"; };
+		D7C34D18299E85FC002F8DA6 /* ExpenModel.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = ExpenModel.xcdatamodel; sourceTree = "<group>"; };
+		D7C34D1A299E87A7002F8DA6 /* CoreDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataManager.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -80,6 +82,8 @@
 				D7877B182985A734007DBB24 /* iSpendifyApp.swift */,
 				D7877B1C2985A735007DBB24 /* Assets.xcassets */,
 				D7877B1E2985A735007DBB24 /* Preview Content */,
+				D7C34D17299E85FC002F8DA6 /* ExpenModel.xcdatamodeld */,
+				D7C34D1A299E87A7002F8DA6 /* CoreDataManager.swift */,
 			);
 			path = iSpendify;
 			sourceTree = "<group>";
@@ -100,7 +104,6 @@
 				D7877B332986D41A007DBB24 /* SettingsView.swift */,
 				D7877B2F2986D3E3007DBB24 /* HomeView.swift */,
 				D7877B312986D401007DBB24 /* RecentTransactionsView.swift */,
-				D70619BC298AF63E003FBA10 /* TestRowView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -192,7 +195,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				D7877B3D2986E567007DBB24 /* TransactionModel.swift in Sources */,
-				D70619BD298AF63E003FBA10 /* TestRowView.swift in Sources */,
+				D7C34D19299E85FC002F8DA6 /* ExpenModel.xcdatamodeld in Sources */,
 				D7877B382986E549007DBB24 /* NumbersOnlyViewModifier.swift in Sources */,
 				D7877B1B2985A734007DBB24 /* ContentView.swift in Sources */,
 				D7877B302986D3E3007DBB24 /* HomeView.swift in Sources */,
@@ -202,6 +205,7 @@
 				D7877B342986D41A007DBB24 /* SettingsView.swift in Sources */,
 				D7877B322986D401007DBB24 /* RecentTransactionsView.swift in Sources */,
 				D7877B192985A734007DBB24 /* iSpendifyApp.swift in Sources */,
+				D7C34D1B299E87A7002F8DA6 /* CoreDataManager.swift in Sources */,
 				D728AD522995A9C500295B40 /* Authentication.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -338,8 +342,7 @@
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -368,8 +371,7 @@
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -405,6 +407,19 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		D7C34D17299E85FC002F8DA6 /* ExpenModel.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				D7C34D18299E85FC002F8DA6 /* ExpenModel.xcdatamodel */,
+			);
+			currentVersion = D7C34D18299E85FC002F8DA6 /* ExpenModel.xcdatamodel */;
+			path = ExpenModel.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = D7877B0D2985A734007DBB24 /* Project object */;
 }
