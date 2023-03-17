@@ -46,8 +46,9 @@ struct SettingsView: View {
         }
     }
     var body: some View {
-        NavigationStack{
-            List{
+        ZStack{
+            Color.background.ignoresSafeArea()
+            VStack{
                 Picker(selection: $systemTheme){
                     ForEach(SchemeType.allCases) { item in
                         Text(item.title)
@@ -56,7 +57,6 @@ struct SettingsView: View {
                 } label: {
                     Text("Pick a theme")
                 }
-                
             }
             .navigationTitle("Settings")
         }

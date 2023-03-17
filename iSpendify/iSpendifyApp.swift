@@ -23,7 +23,7 @@ struct iSpendifyApp: App {
                         //RecentTransactionsView()
                     }
                     .tabItem{
-                        Image("airplane.circle.fill")
+                        Image(systemName: "airplane.circle.fill")
                         Text("Overview")
                         
                     }
@@ -31,7 +31,7 @@ struct iSpendifyApp: App {
                         RecentTransactionsView().environment(\.managedObjectContext, dataController.container.viewContext)
                     }
                     .tabItem{
-                        Image("creditcard")
+                        Image(systemName: "creditcard")
                         Text("Transactions")
                     }
                     .navigationViewStyle(.columns)
@@ -39,7 +39,7 @@ struct iSpendifyApp: App {
                         SettingsView()
                     }
                     .tabItem{
-                        Image("creditcard")
+                        Image(systemName: "creditcard")
                         Text("Settings")
                     }
                 }
