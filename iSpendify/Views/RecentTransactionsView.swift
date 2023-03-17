@@ -22,9 +22,9 @@ struct RecentTransactionsView: View {
     }
 
     var body: some View {
-        ScrollView{
                 ZStack{
-                    VStack{
+                    Color.background.ignoresSafeArea()
+                    List{
                         ForEach(trans){ item in
                             HStack(spacing:20){
                                 RoundedRectangle(cornerRadius: 20, style: .continuous)
@@ -104,24 +104,19 @@ struct RecentTransactionsView: View {
                                 
                                 //.foregroundColor()
                             }
-                            .padding([.top, .bottom], 11)
-                            .padding(.horizontal)
                             .foregroundColor(Color.text)
-                            .background(Color.background)
-                            Divider()
                         }
                         .onDelete(perform: deletetrans)
+                        
                     }
-            }
         }
+        .background(Color.background)
         .toolbar{
             ToolbarItem(placement: .navigationBarTrailing){
                 EditButton()
             }
-            
         }
         .navigationTitle("Transactions")
-        .background(Color.background)
         .scrollContentBackground(.hidden)
     }
     func deletetrans(at offsets: IndexSet){

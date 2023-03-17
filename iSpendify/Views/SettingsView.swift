@@ -37,10 +37,10 @@ struct SettingsView: View {
     var selectedScheme: ColorScheme? {
         guard let theme = SchemeType(rawValue: systemTheme) else { return nil }
         switch theme {
+        case .dark:
+                return .dark
         case .light:
             return .light
-        case .dark:
-            return .dark
         default:
             return nil
         }

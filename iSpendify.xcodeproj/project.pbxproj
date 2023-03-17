@@ -19,15 +19,13 @@
 		D7877B342986D41A007DBB24 /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7877B332986D41A007DBB24 /* SettingsView.swift */; };
 		D7877B362986DB51007DBB24 /* extC.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7877B352986DB51007DBB24 /* extC.swift */; };
 		D7877B382986E549007DBB24 /* NumbersOnlyViewModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7877B372986E549007DBB24 /* NumbersOnlyViewModifier.swift */; };
-		D7877B3B2986E565007DBB24 /* PreviewTESTData.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7877B3A2986E565007DBB24 /* PreviewTESTData.swift */; };
-		D7877B3D2986E567007DBB24 /* TransactionModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7877B3C2986E567007DBB24 /* TransactionModel.swift */; };
 		D7C34D19299E85FC002F8DA6 /* ExpenModel.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = D7C34D17299E85FC002F8DA6 /* ExpenModel.xcdatamodeld */; };
 		D7C34D1B299E87A7002F8DA6 /* CoreDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7C34D1A299E87A7002F8DA6 /* CoreDataManager.swift */; };
 		D7FD8BC429C4B4CD00390557 /* SwiftUICharts in Frameworks */ = {isa = PBXBuildFile; productRef = D7FD8BC329C4B4CD00390557 /* SwiftUICharts */; };
 		D7FD8BCC29C4F1E000390557 /* input-transaction.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = D7FD8BCB29C4F1E000390557 /* input-transaction.jpeg */; };
 		D7FD8BCE29C4F21100390557 /* home-view.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = D7FD8BCD29C4F21100390557 /* home-view.jpeg */; };
-		D7FD8BD029C4F24B00390557 /* settings-view.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = D7FD8BCF29C4F24B00390557 /* settings-view.jpeg */; };
 		D7FD8BD229C4F25200390557 /* alltransa.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = D7FD8BD129C4F25200390557 /* alltransa.jpeg */; };
+		D7FD8BD429C4F35100390557 /*  settings-view.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = D7FD8BD329C4F35100390557 /*  settings-view.jpeg */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -44,14 +42,12 @@
 		D7877B332986D41A007DBB24 /* SettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
 		D7877B352986DB51007DBB24 /* extC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = extC.swift; sourceTree = "<group>"; };
 		D7877B372986E549007DBB24 /* NumbersOnlyViewModifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NumbersOnlyViewModifier.swift; sourceTree = "<group>"; };
-		D7877B3A2986E565007DBB24 /* PreviewTESTData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PreviewTESTData.swift; sourceTree = "<group>"; };
-		D7877B3C2986E567007DBB24 /* TransactionModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransactionModel.swift; sourceTree = "<group>"; };
 		D7C34D18299E85FC002F8DA6 /* ExpenModel.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = ExpenModel.xcdatamodel; sourceTree = "<group>"; };
 		D7C34D1A299E87A7002F8DA6 /* CoreDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataManager.swift; sourceTree = "<group>"; };
 		D7FD8BCB29C4F1E000390557 /* input-transaction.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "input-transaction.jpeg"; sourceTree = "<group>"; };
 		D7FD8BCD29C4F21100390557 /* home-view.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "home-view.jpeg"; sourceTree = "<group>"; };
-		D7FD8BCF29C4F24B00390557 /* settings-view.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "settings-view.jpeg"; sourceTree = "<group>"; };
 		D7FD8BD129C4F25200390557 /* alltransa.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = alltransa.jpeg; sourceTree = "<group>"; };
+		D7FD8BD329C4F35100390557 /*  settings-view.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = " settings-view.jpeg"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -123,11 +119,9 @@
 				D7FD8BD129C4F25200390557 /* alltransa.jpeg */,
 				D7FD8BCB29C4F1E000390557 /* input-transaction.jpeg */,
 				D7FD8BCD29C4F21100390557 /* home-view.jpeg */,
-				D7FD8BCF29C4F24B00390557 /* settings-view.jpeg */,
+				D7FD8BD329C4F35100390557 /*  settings-view.jpeg */,
 				D7877B352986DB51007DBB24 /* extC.swift */,
 				D7877B372986E549007DBB24 /* NumbersOnlyViewModifier.swift */,
-				D7877B3C2986E567007DBB24 /* TransactionModel.swift */,
-				D7877B3A2986E565007DBB24 /* PreviewTESTData.swift */,
 				D728AD512995A9C500295B40 /* Authentication.swift */,
 			);
 			path = Extension;
@@ -201,8 +195,8 @@
 				D7FD8BCE29C4F21100390557 /* home-view.jpeg in Resources */,
 				D7FD8BD229C4F25200390557 /* alltransa.jpeg in Resources */,
 				D7877B202985A735007DBB24 /* Preview Assets.xcassets in Resources */,
-				D7FD8BD029C4F24B00390557 /* settings-view.jpeg in Resources */,
 				D77CDE422997FC6B00D3ED25 /* faci.png in Resources */,
+				D7FD8BD429C4F35100390557 /*  settings-view.jpeg in Resources */,
 				D7877B1D2985A735007DBB24 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -214,14 +208,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D7877B3D2986E567007DBB24 /* TransactionModel.swift in Sources */,
 				D7C34D19299E85FC002F8DA6 /* ExpenModel.xcdatamodeld in Sources */,
 				D7877B382986E549007DBB24 /* NumbersOnlyViewModifier.swift in Sources */,
 				D7877B1B2985A734007DBB24 /* ContentView.swift in Sources */,
 				D7877B302986D3E3007DBB24 /* HomeView.swift in Sources */,
 				D7877B362986DB51007DBB24 /* extC.swift in Sources */,
 				D70619BB2989E250003FBA10 /* inputView.swift in Sources */,
-				D7877B3B2986E565007DBB24 /* PreviewTESTData.swift in Sources */,
 				D7877B342986D41A007DBB24 /* SettingsView.swift in Sources */,
 				D7877B322986D401007DBB24 /* RecentTransactionsView.swift in Sources */,
 				D7877B192985A734007DBB24 /* iSpendifyApp.swift in Sources */,

@@ -80,7 +80,7 @@ struct ContentView: View {
                 }
             }
         } else {
-            print("er")
+            print(error)
         }
     }
 }

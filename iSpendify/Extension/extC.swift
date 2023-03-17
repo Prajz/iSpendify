@@ -17,23 +17,4 @@ extension Color{
     
 }
 
-extension DateFormatter {
-    static let allNumeric: DateFormatter = {
-        print("Init Date formater")
-        let formatter = DateFormatter()
-        formatter.dateFormat = "dd/MM/yyyy"
-        
-        return formatter
-    }()
-}
-
-
-extension String{
-    func dateParsed() -> Date {
-        guard let parsedDate = DateFormatter.allNumeric.date(from: self) else { return Date() }
-        //in case it fails return today
-        
-        return parsedDate
-    }
-}
 

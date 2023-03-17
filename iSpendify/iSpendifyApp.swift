@@ -39,7 +39,7 @@ struct iSpendifyApp: App {
                         SettingsView()
                     }
                     .tabItem{
-                        Image(systemName: "creditcard")
+                        Image(systemName: "gear")
                         Text("Settings")
                     }
                 }

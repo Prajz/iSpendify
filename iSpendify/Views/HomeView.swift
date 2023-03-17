@@ -16,31 +16,53 @@ struct HomeView: View {
     @State private var showingAddScreen = false
     
     
-    @State var out: [Double] = [0]
+    @State var out: [Double] = []
     
     @State var fetched: [Double] = []
     
     var demoData: [Double] = [-4,7,3,-1,9]
     
     func fillgr(){
-        print("bongo1")
+        
+        out.append(0)
+        
         for item in transf{
-            var bong = item.amountc
-            print("tt \(String(describing: bong))")
-            var bongd = NumberFormatter().number(from: bong!)?.doubleValue
+            let bong = item.amountc
+            let bongd = NumberFormatter().number(from: bong!)?.doubleValue
             var roundbong = round((bongd ?? 0.0) * 100) / 100
             if (item.isExpensec == true){
                 roundbong = 0 - (roundbong)
             }
+            fetched.append(bongd ?? 0.0)
             print("bongo \(roundbong)")
             let t = (out.last ?? 0.00) + roundbong
-            if (t == out.last) {
-                
-            }else{
-                out.append(t)
+            
+            out.append(t)
             }
         }
-        
+    
+    func testfillgr(){
+        if (out.last == 0){
+            fillgr()
+        }
+        for item in transf.prefix(1){
+            print(item.merchantc)
+            let bong = item.amountc
+            let bongd = NumberFormatter().number(from: bong!)?.doubleValue
+            for item in trans.prefix(1) {
+                print(item.merchantc)
+                let bongs = item.amountc
+                let bongsd = NumberFormatter().number(from: bongs!)?.doubleValue
+                print("bongsd \(bongsd)")
+                print("bongd \(bongd)")
+                if (bongsd == bongd){
+                    fillgr()
+                }
+                else{
+                    
+                }
+            }
+        }
     }
     
     func createformatter() -> DateFormatter{
@@ -51,30 +73,28 @@ struct HomeView: View {
         return form
     }
     
-    init(){
-        let _ = fillgr()
-    }
-    
     var body: some View {
         NavigationStack{
             ScrollView{
                 VStack{
                     let _ = fillgr()
-                    HStack{
-                        CardView(){
-                            VStack{
-                                ChartLabel( " £\(out.last ?? 0.00)", type: .title, format: "%.2f")
+                    if !out.isEmpty {
+                        HStack{
+                            CardView(){
+                                VStack(alignment: .leading){
+                                    ChartLabel( " £\((((out.last) ?? 0.00) * 100).rounded() / 100)", type: .subTitle, format: "£%.2f")
                                     
-                                LineChart()
+                                    LineChart()
+                                }
+                                .background(Color.background)
+                                .foregroundColor(Color.icon)
                             }
-                            .background(Color.background)
-                            .foregroundColor(Color.icon)
+                            .data(out)
+                            .chartStyle(ChartStyle(backgroundColor: Color.background, foregroundColor: ColorGradient(Color.icon.opacity(0.4), Color.icon)))
+                            .frame(height: 300)
+                            .foregroundColor(Color.background)
+                            
                         }
-                        .data(out)
-                        .chartStyle(ChartStyle(backgroundColor: Color.background, foregroundColor: ColorGradient(Color.icon.opacity(0.4), Color.icon)))
-                        .frame(height: 300)
-                        .foregroundColor(Color.background)
-                        
                     }
                     Text("Total transactions: \(trans.count)")
                         .padding()
@@ -156,7 +176,7 @@ struct HomeView: View {
                             let b: String = String(format: "%.2f", roundbong)
                             
                             if (item.isExpensec == true){
-                                Text("£\(b)")
+                                Text("- £\(b)")
                             }else{
                                 Text("+ £\(b)")
                                     .foregroundColor(.mint)
@@ -199,6 +219,13 @@ struct HomeView: View {
                 .navigationTitle("Overview")
             }
             .refreshable{
+                out.removeAll()
+                out.append(0)
+                fillgr()
+            }
+            .onAppear{
+                out.removeAll()
+                out.append(0)
                 fillgr()
             }
             .background(Color.background)
