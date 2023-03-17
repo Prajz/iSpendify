@@ -23,7 +23,7 @@ struct iSpendifyApp: App {
                         //RecentTransactionsView()
                     }
                     .tabItem{
-                        Image(systemName: "airplane.circle.fill")
+                        Image(systemName: "homekit")
                         Text("Overview")
                         
                     }
