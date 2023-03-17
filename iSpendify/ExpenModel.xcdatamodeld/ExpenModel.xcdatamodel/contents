@@ -3,7 +3,7 @@
     <entity name="Tra" representedClassName="Tra" syncable="YES" codeGenerationType="class">
         <attribute name="amountc" attributeType="String"/>
         <attribute name="categoryc" attributeType="String" defaultValueString="Leisure"/>
-        <attribute name="datec" attributeType="Date" usesScalarValueType="NO"/>
+        <attribute name="datec" attributeType="Date" minDateTimeInterval="637690980" usesScalarValueType="NO"/>
         <attribute name="id" attributeType="UUID" usesScalarValueType="NO"/>
         <attribute name="isExpensec" attributeType="Boolean" usesScalarValueType="YES"/>
         <attribute name="merchantc" attributeType="String"/>

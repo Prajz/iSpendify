@@ -24,6 +24,7 @@
 		D7877B3D2986E567007DBB24 /* TransactionModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7877B3C2986E567007DBB24 /* TransactionModel.swift */; };
 		D7C34D19299E85FC002F8DA6 /* ExpenModel.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = D7C34D17299E85FC002F8DA6 /* ExpenModel.xcdatamodeld */; };
 		D7C34D1B299E87A7002F8DA6 /* CoreDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7C34D1A299E87A7002F8DA6 /* CoreDataManager.swift */; };
+		D7FD8BC429C4B4CD00390557 /* SwiftUICharts in Frameworks */ = {isa = PBXBuildFile; productRef = D7FD8BC329C4B4CD00390557 /* SwiftUICharts */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -52,6 +53,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D7FD8BC429C4B4CD00390557 /* SwiftUICharts in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -138,6 +140,9 @@
 			dependencies = (
 			);
 			name = iSpendify;
+			packageProductDependencies = (
+				D7FD8BC329C4B4CD00390557 /* SwiftUICharts */,
+			);
 			productName = iSpendify;
 			productReference = D7877B152985A734007DBB24 /* iSpendify.app */;
 			productType = "com.apple.product-type.application";
@@ -166,6 +171,9 @@
 				Base,
 			);
 			mainGroup = D7877B0C2985A734007DBB24;
+			packageReferences = (
+				D7FD8BC229C4B4CD00390557 /* XCRemoteSwiftPackageReference "ChartView" */,
+			);
 			productRefGroup = D7877B162985A734007DBB24 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -407,6 +415,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		D7FD8BC229C4B4CD00390557 /* XCRemoteSwiftPackageReference "ChartView" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/AppPear/ChartView";
+			requirement = {
+				kind = exactVersion;
+				version = "2.0.0-beta.2";
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		D7FD8BC329C4B4CD00390557 /* SwiftUICharts */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = D7FD8BC229C4B4CD00390557 /* XCRemoteSwiftPackageReference "ChartView" */;
+			productName = SwiftUICharts;
+		};
+/* End XCSwiftPackageProductDependency section */
 
 /* Begin XCVersionGroup section */
 		D7C34D17299E85FC002F8DA6 /* ExpenModel.xcdatamodeld */ = {

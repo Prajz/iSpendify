@@ -41,4 +41,5 @@ class CoreDataManager:ObservableObject{
         
         save(context: context)
     }
+
 }
