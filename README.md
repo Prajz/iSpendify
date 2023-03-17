@@ -20,14 +20,13 @@ It consists of the following views:
 
    ![Dark-mode-input](/iSpendify/Extension/input-transaction.jpeg)
 
- - *Transactions View* which shows transactions based on date with abliity to add new transactions
+ - *Transactions View* which shows transactions based on date with abliity to delete any transaction
  
    ![Dark-mode-input](/iSpendify/Extension/alltransa.jpeg)
    
- - *Settings View* which includes basic app settings
+ - *Settings View* which includes basic app theme settings
   
    ![Dark-mode-input](/iSpendify/Extension/settings-view.jpeg)
 
-_________________________
 Keeps track of spending, allowing user to input expenditure and income, with a chart created based on the previous 30 days.
 
