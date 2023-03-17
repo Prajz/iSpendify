@@ -29,10 +29,10 @@ enum categor: String, Identifiable, CaseIterable {
     
     case transport = "Transport"
     case software = "Software"
-    case food = "food"
-    case leisure = "leisure"
-    case health = "health"
-    case work = "work"
+    case food = "Food"
+    case leisure = "Leisure"
+    case health = "Health"
+    case work = "Work"
 }
 
 extension categor {
@@ -76,12 +76,12 @@ struct inputView: View {
     }
     
     @State private var path = NavigationPath()
-    @State public var expe: Bool = UserDefaults.standard.bool(forKey: "DEB_KEY")
+    @State public var expe: Bool = true
     @State public var cdate = Date()
     @State public var comp = ""
     @Environment(\.managedObjectContext) private var viewContext
     @State public var mercha: categor = .transport
-    @State public var amount: String = UserDefaults.standard.string(forKey: "AM_KEY") ?? ""
+    @State public var amount: String = ""
     @FocusState private var focusedField: FocusedField?
     
 

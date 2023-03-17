@@ -11,9 +11,16 @@ import Foundation
 struct RecentTransactionsView: View {
     
     @Environment (\.managedObjectContext) var mox
-    @FetchRequest (sortDescriptors: []) var trans : FetchedResults<Tra>
-    let dateformatter = DateFormatter()
+    @FetchRequest (sortDescriptors: [NSSortDescriptor(key: "datec", ascending: false)]) var trans : FetchedResults<Tra>
     
+    func createformatter() -> DateFormatter{
+        let form = DateFormatter()
+        form.dateStyle = .medium
+        form.timeZone = .current
+        
+        return form
+    }
+
     var body: some View {
         ScrollView{
             ZStack{
@@ -24,10 +31,44 @@ struct RecentTransactionsView: View {
                                 .fill(Color.icon.opacity(0.45))
                                 .frame(width: 50, height: 50)
                                 .overlay {
-                                    Image(systemName: "airplane")
-                                    //.foregroundColor(.white)
-                                        .resizable()
-                                        .frame(width: 30, height: 30)
+                                    if (item.categoryc == "Transport") {
+                                        Image(systemName: "bus")
+                                        //.foregroundColor(.white)
+                                            .resizable()
+                                            .frame(width: 30, height: 30)
+                                    }
+                                    if (item.categoryc == "Software") {
+                                        Image(systemName: "macbook.and.iphone")
+                                        //.foregroundColor(.white)
+                                            .resizable()
+                                            .frame(width: 30, height: 30)
+                                    }
+                                    if (item.categoryc == "Food") {
+                                        Image(systemName: "fork.knife")
+                                        //.foregroundColor(.white)
+                                            .resizable()
+                                            .frame(width: 30, height: 30)
+                                    }
+                                    if (item.categoryc == "Leisure") {
+                                        Image(systemName: "figure.skiing.downhill" )
+                                        //.foregroundColor(.white)
+                                            .resizable()
+                                            .frame(width: 30, height: 30)
+                                    }
+                                    if (item.categoryc == "Health") {
+                                        Image(systemName: "stethoscope")
+                                        //.foregroundColor(.white)
+                                            .resizable()
+                                            .frame(width: 30, height: 30)
+                                    }
+                                    if (item.categoryc == "Work") {
+                                        Image(systemName: "latch.2.case")
+                                        //.foregroundColor(.white)
+                                            .resizable()
+                                            .frame(width: 30, height: 30)
+                                    }
+                                    
+                                    
                                 }
                             VStack(alignment: .leading, spacing: 4){
                                 //MARK: Transaction merchant
@@ -41,19 +82,25 @@ struct RecentTransactionsView: View {
                                     .font(.footnote)
                                     .opacity(0.7)
                                     .lineLimit(1)
+                                let form = createformatter()
                                 
                                 //MARK: Transaction Date
-                                Text(dateformatter.string(from: item.datec ?? Date()))
+                                Text(form.string(from:item.datec ?? Date()))
                                     .font(.footnote)
                                     .opacity(0.7)
                                 
                             }
-                            //.padding([.top, .bottom], 100)
                             
                             Spacer()
                             
+                            if (item.isExpensec == true){
+                                Text("£\(item.amountc ?? "noneee")")
+                            }else{
+                                Text("+ £\(item.amountc ?? "noneee")")
+                                    .foregroundColor(.mint)
+                            }
                             //MARK: Transaction Amount
-                            Text(item.amountc ?? "noneee")// .currency(code: "gbp"))
+                            
                             
                             //.foregroundColor()
                         }
