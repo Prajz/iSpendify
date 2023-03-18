@@ -6,6 +6,8 @@
 
 A video demonstrating this project's functionality is available [here](https://youtu.be/UtPJ3gss0Go).
 
+Keeps track of spending, allowing user to input expenditure and income, with a chart created based on the previous 30 days.
+
 It consists of the following views:
 
  - *LoginView* allows user to authenticate themself with FaceID upon opening the app
@@ -14,7 +16,7 @@ It consists of the following views:
 
  - *Home View* shows graph and recent transactions with ability to add new transactions 
  
-   ![Dark-mode-input](/iSpendify/Extension/home-view.jpeg)
+   ![Home-Overview](/iSpendify/Extension/home-view.jpeg)
 
  -  *Input View* allows the user to input monetary losses or gains.
 
@@ -22,11 +24,11 @@ It consists of the following views:
 
  - *Transactions View* which shows transactions based on date with abliity to delete any transaction
  
-   ![Dark-mode-input](/iSpendify/Extension/alltransa.jpeg)
+   ![All-Transactions](/iSpendify/Extension/alltransa.jpeg)
    
  - *Settings View* which includes basic app theme settings
   
-   ![Dark-mode-input](/iSpendify/Extension/settings-view.jpeg)
+   ![Theme-Settings](/iSpendify/Extension/settings-view.jpeg)
 
-Keeps track of spending, allowing user to input expenditure and income, with a chart created based on the previous 30 days.
+
 
