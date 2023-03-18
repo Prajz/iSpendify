@@ -1,8 +1,10 @@
 ## **iSpendify** - Expense Tracker
 
-###### iOS app in SwiftUI using Combine, Core Data, SwiftUICharts and SwiftCollections
+###### iOS app in SwiftUI using CoreData, AppStorage and SwiftUICharts
 
-###### Will update the views with screenshots once fully functional ######
+###### To use this in Xcode add the following library ```https://github.com/AppPear/ChartView``` and use ``` 2.0.0-beta.2 ``` ######
+
+A video demonstrating this project's functionality is available [here](https://youtu.be/UtPJ3gss0Go).
 
 It consists of the following views:
 
@@ -11,22 +13,20 @@ It consists of the following views:
    ![FaceID](/iSpendify/Extension/faci.png)
 
  - *Home View* shows graph and recent transactions with ability to add new transactions 
-
-
+ 
+   ![Dark-mode-input](/iSpendify/Extension/home-view.jpeg)
 
  -  *Input View* allows the user to input monetary losses or gains.
 
    ![Dark-mode-input](/iSpendify/Extension/input-transaction.jpeg)
 
- - *Transactions View* which shows transactions based on date with abliity to add new transactions
+ - *Transactions View* which shows transactions based on date with abliity to delete any transaction
+ 
+   ![Dark-mode-input](/iSpendify/Extension/alltransa.jpeg)
+   
+ - *Settings View* which includes basic app theme settings
+  
+   ![Dark-mode-input](/iSpendify/Extension/settings-view.jpeg)
 
-
-
- - *Settings View* which includes basic app settings
-
-
-
-_________________________
 Keeps track of spending, allowing user to input expenditure and income, with a chart created based on the previous 30 days.
 
-A video demonstrating this project's functionality will soon be published [here](https://github.com/Prajz).
