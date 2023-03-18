@@ -46,15 +46,11 @@ struct HomeView: View {
             fillgr()
         }
         for item in transf.prefix(1){
-            print(item.merchantc)
             let bong = item.amountc
             let bongd = NumberFormatter().number(from: bong!)?.doubleValue
             for item in trans.prefix(1) {
-                print(item.merchantc)
                 let bongs = item.amountc
                 let bongsd = NumberFormatter().number(from: bongs!)?.doubleValue
-                print("bongsd \(bongsd)")
-                print("bongd \(bongd)")
                 if (bongsd == bongd){
                     fillgr()
                 }
